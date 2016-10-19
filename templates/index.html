@@ -2,8 +2,17 @@
 <head>
   <meta charset="utf-8">
   <title>CoffeeShop</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"
 </head>
 <body>
-  <h1>Welcome</h1>
+  <h1>Welcome to CoffeeShop</h1>
+  <p>Please let our bot take care of you</p>
+  <form method="POST">
+    <input type="text" name="user_input">
+    <input type="submit" name="submit" value="ask bot" >
+  </form>
+  {% if ret %}
+    {{ ret }}
+  {% endif %}
 </body>
 </html>
