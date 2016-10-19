@@ -3,9 +3,19 @@
   <meta charset="utf-8">
   <title>CoffeeShop</title>
   <style>
-  h1 {text-align: center;}
-  #menu {float: left; margin-left: 200px}
+  h1 {text-align: center; color: rgb(112, 56, 15);}
+  h2 {color: rgb(112, 56, 15);}
+  #menu {border-style: dotted;
+        border-radius: 5px;
+        padding: 20px;
+        float: left;
+        margin-left: 200px;}
   #order {float: right; margin-right: 490px;}
+  #coffee {width: 200px;
+          height: 200px;
+          margin-left: 215px;
+          margin-top: 183px;
+          position: absolute;}
   </style>
 <body>
   <h1>Welcome to CoffeeShop</h1>
@@ -31,11 +41,15 @@
     <p id="sub">Please let our bot take care of you</p>
     <form method="POST">
       <input type="text" name="user_input">
-      <input type="submit" name="submit" value="ask bot" >
+      <input type="submit" name="submit" value="tell me!" >
     </form>
     {% if ret %}
       {{ ret }}
     {% endif %}
+  </div>
+  <div id="foot"></div>
+  <div>
+    <img id="coffee" src="http://whiskyadvocate.com/wp-content/uploads/2015/03/coffee-312521_1280.png"><br />
   </div>
 </body>
 </html>
