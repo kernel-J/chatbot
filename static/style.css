@@ -1,5 +1,8 @@
-h1
-{
+h1 {
     text-align: center;
-    text-decoration-color: red;
+    color: red;
+}
+
+#order {
+  float:left;
 }

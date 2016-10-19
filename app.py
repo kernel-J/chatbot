@@ -3,6 +3,7 @@ import apiai
 import json
 
 app = Flask(__name__)
+
 ai = apiai.ApiAI('68a530a5164d4f4fab7b044398f99ebd')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -45,5 +46,4 @@ def main(user_input):
         print "bot: " + fulfillment['speech']
 '''
 if __name__ == '__main__':
-    app.run(debug=True)
-    #main()
+    app.run(debug=False)

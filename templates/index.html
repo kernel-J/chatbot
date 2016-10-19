@@ -2,17 +2,40 @@
 <head>
   <meta charset="utf-8">
   <title>CoffeeShop</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"
-</head>
+  <style>
+  h1 {text-align: center;}
+  #menu {float: left; margin-left: 200px}
+  #order {float: right; margin-right: 490px;}
+  </style>
 <body>
   <h1>Welcome to CoffeeShop</h1>
-  <p>Please let our bot take care of you</p>
-  <form method="POST">
-    <input type="text" name="user_input">
-    <input type="submit" name="submit" value="ask bot" >
-  </form>
-  {% if ret %}
-    {{ ret }}
-  {% endif %}
+  <div id="menu">
+    <h2>Menu</h2>
+    <h3>Beverages</h3>
+    <ul>
+      <li>Coffee</li>
+      <li>Cappuccino</li>
+      <li>Hot Chocolate</li>
+      <li>Tea</li>
+      <li>Smootie</li>
+    </ul>
+    <h3>Snacks</h3>
+    <ul>
+      <li>Muffin</li>
+      <li>Cookie</li>
+      <li>Cake</li>
+      <li>Biscuit</li>
+    </ul>
+  </div> <br />
+  <div id="order">
+    <p id="sub">Please let our bot take care of you</p>
+    <form method="POST">
+      <input type="text" name="user_input">
+      <input type="submit" name="submit" value="ask bot" >
+    </form>
+    {% if ret %}
+      {{ ret }}
+    {% endif %}
+  </div>
 </body>
 </html>
