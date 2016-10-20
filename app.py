@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-ai = apiai.ApiAI('68a530a5164d4f4fab7b044398f99ebd')
+ai = apiai.ApiAI('consumer key')
 
 @app.route('/', methods=['GET', 'POST'])
 def input():
@@ -30,7 +30,6 @@ def main(user_input):
     return (fulfillment['speech'])
 
 '''def main():
-    ai = apiai.ApiAI('68a530a5164d4f4fab7b044398f99ebd')
 
     while True:
         user_input = raw_input("me: ")
